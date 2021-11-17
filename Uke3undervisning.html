@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MED MVC</title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script>
+        //hjelpevariabel
+        let appDiv = document.getElementById('app');
+        //Model
+        let input = '';
+        let welcome = '';
+        let number = 0;
+
+        //View
+        show();
+        function show(){
+            let html = `
+            <input type="text" onchange="input = this.value">
+            <div> ${welcome} ${input}</div>
+            <button onclick="showInput()">ENTER</button>
+            <div>${number}</div>
+            <button onclick="tell()">TELL</button>
+            <button onclick="kjøpOppgradering()">kjøp</button>
+            `;
+            appDiv.innerHTML = html;
+        }
+
+        //Controller
+        function showInput(){
+            welcome = 'velkommen hit'
+            show();
+        }
+        function tell(){
+        
+            if(number >= 10){
+                number = 0;
+            }
+            else 
+            number ++;
+            show();
+        }
+        function kjøpOppgradering(){
+            number *= 10;
+            show();
+        }
+
+
+
+
+    </script>
+</body>
+</html>

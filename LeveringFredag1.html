@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        body{
+            background-color:lightslategray;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title>Hint: Svaret er 1</title>
+</head>
+<body>    
+    <div id="app"></div>
+    
+    <script>
+
+        //Model
+        let text = "";
+        const password ="1";
+        let svar ="";
+
+        //View
+        show();
+        function show(){
+            let html = `
+            <h1>Gjett riktig tall</h1>
+            <input onchange="input(this.value)">
+            <h1>${svar}</h1>
+            `;
+            app.innerHTML = html;
+        }              
+        //Controller
+        function input(thisUserinput){
+            text = thisUserinput;
+        if(text == password){
+            svar = "Riktig";           
+        }
+        else{
+            svar = "Feil";           
+        }
+        show();
+        }
+    </script>
+</body>
+</html>

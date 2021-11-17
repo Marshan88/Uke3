@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puslespill</title>
+    <style>
+        body{
+            background-color: dark;
+        }
+        button{
+            float: left;
+            width: 402px;
+            height: 166px;
+            background-color:burlywood;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+        
+        #r1k1, #r2k1, #r3k1{
+            clear: left;
+        }
+        img {
+            width: 402px;
+            height: 166px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>Teamoppgave uke 3</h1>
+<hr>
+
+    <button id="r1k1" onclick="lagre()"><img src="https://res.cloudinary.com/norgesgruppen/image/upload/f_auto,q_50,w_420,h_420,c_pad/v1609897004/Product/7044610874661.jpg"></button>            <button id="r1k2"></button>
+
+    <button id="r2k1"><img src="https://res.cloudinary.com/norgesgruppen/image/upload/f_auto,q_50,w_420,h_420,c_pad/v1609897004/Product/7044610874661.jpg"></button>            <button id="r2k2"></button>
+
+    <button id="r3k1"><img src="https://res.cloudinary.com/norgesgruppen/image/upload/f_auto,q_50,w_420,h_420,c_pad/v1609897004/Product/7044610874661.jpg"></button>            <button id="r3k2"></button>
+
+    <button id="usynlig"></button>
+
+    <script>
+      function lagre() {
+  document.getElementById("usynlig").value = document.getElementById("r1k1").value;
+}
+
+
+    </script>
+
+</body>
+</html>
